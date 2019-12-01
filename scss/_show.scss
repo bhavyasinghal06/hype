@@ -1,0 +1,154 @@
+/* :: 15.0 Show CSS */
+
+.show-welcome-area {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 500px;
+
+    @media #{$breakpoint-lg} {
+        height: 400px;
+    }
+
+    @media #{$breakpoint-xs} {
+        height: 400px;
+    }
+
+    .show-welcome-text {
+        p {
+            font-size: 20px;
+            display: block;
+            color: $white;
+        }
+
+        h2 {
+            font-size: 48px;
+            color: $white;
+            display: block;
+            margin-bottom: 20px;
+
+            @media #{$breakpoint-md} {
+                font-size: 42px;
+            }
+
+            @media #{$breakpoint-xs} {
+                font-size: 30px;
+            }
+        }
+
+        span {
+            font-size: 14px;
+            color: $white;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.show-routine-area {
+    position: relative;
+    z-index: 1;
+
+    .nav-tabs {
+        border-bottom: none;
+        margin-bottom: 50px;
+
+        .nav-item {
+            margin-bottom: 0;
+            flex-grow: 1;
+            text-align: center;
+
+            .nav-link {
+                position: relative;
+                z-index: 1;
+                border: none;
+                padding: 10px;
+                font-family: $font-oswald;
+                font-size: 20px;
+                text-transform: uppercase;
+                color: $secondary;
+
+                @media #{$breakpoint-md} {
+                    font-size: 16px;
+                }
+
+                @media #{$breakpoint-xs} {
+                    font-size: 16px;
+                }
+
+                &::after {
+                    width: 80%;
+                    left: 10%;
+                    position: absolute;
+                    height: 2px;
+                    background-color: $border;
+                    bottom: 0;
+                    z-index: 1;
+                    content: '';
+                    @include transition-duration(500ms);
+                }
+
+                &.active {
+                    color: $hover;
+
+                    &::after {
+                        background-color: $hover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.single-show-item {
+    position: relative;
+    z-index: 1;
+    border-radius: 3px;
+    overflow: hidden;
+    @include transition-duration(500ms);
+
+    img {
+        border-radius: 3px;
+        @include transition-duration(800ms);
+    }
+
+    .overlay-content {
+        @include transition-duration(500ms);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 10;
+        top: 0;
+        left: 0;
+        @include display-flex(flex);
+        @include align-items-center;
+        @include justify-content-center;
+        border-radius: 3px;
+        opacity: 1;
+        visibility: visible;
+
+        span {
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: $white;
+            display: block;
+        }
+
+        h5 {
+            color: $white;
+            display: block;
+            margin-bottom: 0;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        img {
+            @include transform(scale(1.2));
+        }
+
+        .overlay-content {
+            background-color: $hover;
+        }
+    }
+}

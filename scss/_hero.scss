@@ -1,0 +1,84 @@
+/* :: 8.0 Hero CSS */
+
+.single-welcome-slide {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 750px;
+    background-color: $white;
+
+    @media #{$breakpoint-lg} {
+        height: 600px;
+    }
+
+    @media #{$breakpoint-md} {
+        height: 550px;
+    }
+
+    @media #{$breakpoint-xs} {
+        height: 410px;
+    }
+
+    @media #{$breakpoint-sm} {
+        height: 460px;
+    }
+
+    .welcome-text {
+        position: relative;
+        z-index: 1;
+
+        h2 {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 20px;
+            color: $white;
+
+            @media #{$breakpoint-xs} {
+                font-size: 36px;
+            }
+
+            @media #{$breakpoint-sm} {
+                font-size: 42px;
+            }
+        }
+
+        h5 {
+            font-size: 18px;
+            color: $white;
+            margin-bottom: 50px;
+            display: block;
+        }
+    }
+}
+
+.welcome-slides {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    .owl-dots {
+        position: absolute;
+        padding: 0 20%;
+        width: 100%;
+        @include display-flex(flex);
+        height: 6px;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+
+        .owl-dot {
+
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            height: 0;
+            background-color: transparent;
+            @include transition-duration(500ms);
+
+            &.active {
+                height: 6px;
+                background-color: $primary;
+            }
+        }
+    }
+}

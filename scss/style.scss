@@ -1,0 +1,96 @@
+/* *********************************************
+[Master Stylesheet]
+
+Template Name: Razo - Radio HTML5 Template
+Template Author: Colorlib
+Template Author URL: http://colorlib.com
+Version: 1.0.0
+Last Update: Jan 13, 2018
+
+*********************************************
+
+[Tables of CSS Content]
+
++ body
+
+    - 01.0 Reboot CSS
+    - 02.0 Spacing CSS
+    - 03.0 Preloader CSS
+    - 04.0 Heading CSS
+    - 05.0 Backtotop CSS
+    - 06.0 Buttons CSS
+    - 07.0 Header CSS
+    - 08.0 Hero CSS
+    - 09.0 App Download CSS
+    - 10.0 Table CSS
+    - 11.0 Blog CSS
+    - 12.0 Footer CSS
+    - 13.0 Music Chart CSS
+    - 14.0 Contact CSS
+    - 15.0 Show CSS
+    - 16.0 Event CSS
+    - 17.0 Podcast CSS
+
+  ---------------------------------------------
+  [Color Codes]
+
+  $heading: #191919; [Heading Color]
+  $text: #6e6e6e; [Text Color]
+  $bg-gray: #e7f2fd; [Gray Background]
+  $primary: #dc2878; [Primary Color]
+  $white: #ffffff; [White Color]
+  $dark: #000000; [Dark Color]
+  $border: #e5e5e5; [Border Color]
+  $hover: #dc2878; [Hover Color]
+  $secondary: #a6a6a6; [Secondary Color]
+
+  ---------------------------------------------
+  [Font Family: 'Open Sans & Oswald']
+--------------------------------------------- */
+
+/* Import Fonts & All CSS */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Oswald:200,300,400,500,600,700');
+@import 'css/bootstrap.min.css';
+@import 'css/animate.css';
+@import 'css/default-assets/classy-nav.css';
+@import 'css/default-assets/audioplayer.css';
+@import 'css/owl.carousel.min.css';
+@import 'css/magnific-popup.css';
+@import 'css/font-awesome.min.css';
+@import 'css/style.css';
+
+// **************
+// Utilities
+// **************
+@import "utilities/fonts";
+@import "utilities/variables";
+@import "utilities/responsive";
+@import "utilities/color";
+
+// *************
+// Mixins
+// *************
+
+@import "mixins/flex";
+@import "mixins/miscellaneous";
+
+// **************
+// Stylesheet
+// *************
+@import "reboot";
+@import "spacing";
+@import "preloader";
+@import "heading";
+@import "backtotop";
+@import "buttons";
+@import "header";
+@import "hero";
+@import "app-download";
+@import "table";
+@import "blog";
+@import "footer";
+@import "music_chart";
+@import "contact";
+@import "show";
+@import "event";
+@import "podcast";

@@ -1,0 +1,288 @@
+/* :: 13.0 Music Charts */
+
+.single-music-chart {
+    position: relative;
+    z-index: 1;
+    padding: 20px 30px;
+    background-color: #0c0c0c;
+    @include transition-duration(500ms);
+    border-bottom: 1px solid #343535;
+
+    &:first-child {
+        border-radius: 3px 3px 0 0;
+    }
+
+    &:last-child {
+        border-radius: 0 0 3px 3px;
+        border-bottom: none;
+    }
+
+    @media #{$breakpoint-xs} {
+        @include flex-wrap(wrap);
+    }
+
+    .music-content {
+        position: relative;
+        z-index: 1;
+
+        @media #{$breakpoint-xs} {
+            margin-bottom: 15px;
+        }
+
+        .sl-number {
+            h5 {
+                color: $white;
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
+        }
+
+        .music-thumb {
+            @include flex(0 0 100px);
+            max-width: 100px;
+            width: 100px;
+            margin-right: 15px;
+
+            @media #{$breakpoint-md} {
+                @include flex(0 0 70px);
+                max-width: 70px;
+                width: 70px;
+            }
+
+            @media #{$breakpoint-xs} {
+                @include flex(0 0 50px);
+                max-width: 50px;
+                width: 50px;
+            }
+
+            img {
+                border-radius: 3px;
+            }
+        }
+
+        .music-title {
+            h5 {
+                color: $white;
+                margin-bottom: 0;
+
+                @media #{$breakpoint-md} {
+                    font-size: 16px;
+                }
+
+                @media #{$breakpoint-xs} {
+                    font-size: 12px;
+                }
+
+                @media #{$breakpoint-xs-landscape} {
+                    font-size: 14px;
+                }
+
+                span {
+                    color: $secondary;
+                }
+            }
+        }
+
+        .audio-player {
+            position: relative;
+            z-index: 1;
+
+            .audioplayer {
+                margin: 0;
+                padding: 0;
+                border: none;
+                margin-right: 15px;
+                height: auto;
+                background-color: transparent;
+            }
+
+            .audioplayer-time,
+            .audioplayer-volume,
+            .audioplayer-bar {
+                display: none;
+            }
+
+            .audioplayer-playpause {
+                width: 34px;
+                height: 34px;
+                border: 3px solid $white;
+            }
+
+            .audioplayer:not(.audioplayer-playing) .audioplayer-playpause a {
+                border-left: 12px solid $white;
+            }
+        }
+
+        .audioplayer-playing {
+            .audioplayer-playpause {
+                border: 3px solid $hover;
+            }
+
+            .audioplayer-playpause a::before,
+            .audioplayer-playpause a::after {
+                background-color: $hover;
+            }
+        }
+    }
+
+    .music-price {
+        @media #{$breakpoint-xs} {
+            @include flex(0 0 100%);
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .razo-btn {
+            @media #{$breakpoint-xs} {
+                min-width: 100%;
+            }
+        }
+    }
+
+    &:hover,
+    &:focus {
+        background-color: #1e1e1e;
+
+        .razo-btn {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+
+    &.style-2 {
+        background-color: $white;
+        border-bottom: none;
+
+        .music-content {
+            position: relative;
+            z-index: 1;
+
+            .sl-number {
+                h5 {
+                    color: $heading;
+                }
+            }
+
+            .music-title {
+                h5 {
+                    color: $heading;
+
+                    span {
+                        color: $secondary;
+                    }
+                }
+            }
+
+            .audio-player {
+                .audioplayer-playpause {
+                    border: 3px solid $heading;
+                }
+
+                .audioplayer:not(.audioplayer-playing) .audioplayer-playpause a {
+                    border-left: 12px solid $heading;
+                }
+            }
+
+            .audioplayer-playing {
+                .audioplayer-playpause {
+                    border: 3px solid $hover;
+                }
+
+                .audioplayer-playpause a::before,
+                .audioplayer-playpause a::after {
+                    background-color: $hover;
+                }
+            }
+        }
+
+        &:hover,
+        &:focus {
+            background-color: #f2f4f5;
+        }
+    }
+}
+
+.single-charts-portfolio {
+    position: relative;
+    z-index: 1;
+    border-radius: 3px;
+    overflow: hidden;
+    @include transition-duration(500ms);
+
+    img {
+        border-radius: 3px;
+        @include transition-duration(800ms);
+    }
+
+    .overlay-content {
+        @include transition-duration(500ms);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 10;
+        top: 0;
+        left: 0;
+        @include display-flex(flex);
+        @include align-items-center;
+        @include justify-content-center;
+        border-radius: 3px;
+        opacity: 0;
+        visibility: hidden;
+        padding: 20px;
+
+        h5 {
+            color: $white;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: $white;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        img {
+            @include transform(scale(1.2));
+        }
+
+        .overlay-content {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.chart-details-content {
+    position: relative;
+    z-index: 1;
+
+    h2 {
+        font-size: 48px;
+        color: $white;
+        display: block;
+        margin-bottom: 15px;
+        font-weight: 600;
+
+        @media #{$breakpoint-lg} {
+            font-size: 42px;
+        }
+
+        @media #{$breakpoint-md} {
+            font-size: 42px;
+        }
+
+        @media #{$breakpoint-xs} {
+            font-size: 36px;
+        }
+    }
+
+    p {
+        margin-bottom: 30px;
+        color: $white;
+    }
+}

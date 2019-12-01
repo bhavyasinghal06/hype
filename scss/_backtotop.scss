@@ -1,0 +1,37 @@
+/* :: 5.0 Backtotop CSS */
+
+#scrollUp {
+    position: absolute !important;
+    bottom: 76px;
+    font-size: 20px;
+    line-height: 43px;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: $primary;
+    color: $white;
+    text-align: center;
+    @include transition-duration(500ms);
+    border-radius: 50%;
+    @include box-shadow($box-shadow);
+    z-index: 600000 !important;
+
+    @media #{$breakpoint-xs} {
+        bottom: 68px;
+    }
+
+    @media #{$breakpoint-xs-landscape} {
+        bottom: 73px;
+    }
+
+    @media #{$breakpoint-sm} {
+        bottom: 76px;
+    }
+
+    &:focus,
+    &:hover {
+        background-color: $dark;
+        color: $white;
+    }
+}

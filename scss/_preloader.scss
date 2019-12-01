@@ -1,0 +1,75 @@
+/* :: 3.0 Preloader CSS */
+
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    background-color: $heading;
+    @include display-flex(flex);
+    @include align-items-center;
+    @include justify-content-center;
+
+    span {
+        color: $white;
+        font-size: 12px;
+        margin-top: 15px;
+        display: block;
+        text-transform: capitalize;
+    }
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $primary;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+
+    0%,
+    100% {
+        -webkit-transform: scale(0.0);
+    }
+
+    50% {
+        -webkit-transform: scale(1.0);
+    }
+}
+
+@keyframes sk-bounce {
+
+    0%,
+    100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}

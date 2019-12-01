@@ -1,0 +1,329 @@
+/* :: 7.0 Header CSS */
+
+.header-area {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    @include transition-duration(500ms);
+    background-color: $heading;
+
+    .social-share-icon,
+    .search-icon {
+        position: relative;
+        z-index: 1;
+        margin-left: 30px;
+        font-size: 16px;
+        color: $white;
+        cursor: pointer;
+        @include transition-duration(500ms);
+
+        @media #{$breakpoint-md} {
+            color: $heading;
+            margin-left: 15px;
+            margin-top: 15px;
+            width: 30px;
+        }
+
+        @media #{$breakpoint-xs} {
+            color: $heading;
+            margin-left: 15px;
+            margin-top: 15px;
+            width: 30px;
+        }
+
+        &:focus,
+        &:hover {
+            color: $hover;
+        }
+    }
+
+    .social-share-icon {
+        margin-left: 60px;
+
+        &.active {
+            @include transform(rotate(-180deg));
+
+            @media #{$breakpoint-md} {
+                @include transform(rotate(0deg));
+            }
+
+            @media #{$breakpoint-xs} {
+                @include transform(rotate(0deg));
+            }
+        }
+
+        @media #{$breakpoint-lg} {
+            margin-left: 30px;
+        }
+
+        @media #{$breakpoint-md} {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        @media #{$breakpoint-xs} {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+    }
+}
+
+.classy-nav-container {
+    background-color: transparent;
+    padding: 0;
+
+    .classy-navbar {
+        @include transition-duration(500ms);
+        height: 90px;
+        padding: 0;
+
+        @media #{$breakpoint-md} {
+            height: 70px;
+        }
+
+        @media #{$breakpoint-xs} {
+            height: 70px;
+        }
+
+        .nav-brand {
+            @media #{$breakpoint-xs} {
+                max-width: 90px;
+                margin-right: 15px;
+            }
+        }
+
+        .classynav ul li {
+            a {
+                position: relative;
+                z-index: 1;
+                font-size: 14px;
+                text-transform: uppercase;
+                color: $white;
+                font-weight: 600;
+
+                @media #{$breakpoint-md} {
+                    color: $heading;
+                }
+
+                @media #{$breakpoint-xs} {
+                    color: $heading;
+                }
+
+                &:focus,
+                &:hover {
+                    color: $hover;
+                    font-weight: 600;
+                }
+            }
+
+            &.cn-dropdown-item,
+            &.megamenu-item {
+                ul li {
+                    a {
+                        font-size: 13px;
+                        text-transform: capitalize;
+                        height: 42px;
+                        line-height: 42px;
+                        padding: 0 30px;
+                        color: $heading;
+                        font-weight: 600;
+
+                        &:focus,
+                        &:hover {
+                            color: $hover;
+                            font-weight: 600;
+                            padding-left: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.classynav ul li.has-down > a::after,
+.classynav ul li.has-down.active > a::after,
+.classynav ul li.megamenu-item > a::after {
+    color: $primary;
+}
+
+.breakpoint-off .classynav ul li .dropdown,
+.breakpoint-off .classynav ul li .megamenu {
+    width: 210px;
+    @include box-shadow($box-shadow);
+    border-radius: 6px;
+}
+
+.breakpoint-off .classynav ul li .megamenu {
+    width: 100%;
+}
+
+.top-search-area {
+    .modal-dialog {
+        max-width: 650px;
+
+        @media #{$breakpoint-sm} {
+            max-width: 530px;
+        }
+    }
+
+    .modal-content {
+        border: none;
+        @include box-shadow($box-shadow);
+        border-radius: 4px;
+
+        .modal-body {
+            padding: 100px;
+            position: relative;
+            z-index: 1;
+            background-color: $bg-gray;
+            border-radius: 4px;
+
+            @media #{$breakpoint-xs} {
+                padding: 50px 40px;
+            }
+
+            @media #{$breakpoint-sm} {
+                padding: 70px;
+            }
+
+            button.close-btn {
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                z-index: 10;
+                font-size: 14px;
+
+                &.btn {
+                    padding: 0;
+                    background-color: transparent;
+
+                    &:focus,
+                    &:hover {
+                        box-shadow: none;
+                        color: $primary;
+                    }
+                }
+            }
+
+            .search-btn {
+                position: absolute;
+                font-size: 150px;
+                bottom: -30px;
+                right: 15px;
+                z-index: -1;
+                color: $primary;
+                opacity: 0.06;
+            }
+        }
+    }
+
+    form {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+
+        input {
+            width: 100%;
+            height: 50px;
+            border: none;
+            box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 35px;
+            font-size: 12px;
+            font-style: italic;
+            padding: 0 30px;
+
+            &:focus {
+                box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.08);
+            }
+        }
+
+        button {
+            display: none;
+        }
+    }
+}
+
+.razo-social-share-area {
+    position: fixed;
+    top: 50%;
+    @include transform(translateY(-50%));
+    right: -300px;
+    z-index: 6500;
+    @include transition-duration(500ms);
+
+    &.active {
+        right: 30px;
+    }
+
+    a {
+        display: block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+        color: $white;
+        text-align: center;
+        margin-bottom: 10px;
+        background-color: $bg-gray;
+        border-radius: 50%;
+        @include box-shadow($box-shadow);
+        text-align: center;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.facebook {
+            background-color: #4c60ac;
+        }
+
+        &.twitter {
+            background-color: #00bae3;
+        }
+
+        &.pinterest {
+            background-color: #d91a18;
+        }
+
+        &.instagram {
+            background-color: #0085d7;
+        }
+
+        &.youtube {
+            background-color: #e20000;
+        }
+
+        &.ss-close-btn {
+            background-color: $heading;
+        }
+
+        @media #{$breakpoint-xs} {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        &:hover,
+        &:focus {
+            @include transform(rotate(360deg));
+            background-color: $primary;
+        }
+    }
+}
+
+.main-header-area.sticky {
+    @include transition-duration(500ms);
+    top: 0;
+    width: 100%;
+    position: fixed;
+    background-color: $heading;
+    @include box-shadow($box-shadow);
+    border-bottom: none;
+    left: 0;
+    z-index: 650;
+
+    .classy-navbar {
+        height: 60px;
+    }
+}

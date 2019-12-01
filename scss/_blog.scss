@@ -1,0 +1,738 @@
+/* :: 11.0 Blog CSS */
+
+.featured-post-area {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+    @include transition-duration(500ms);
+    border-radius: 3px;
+
+    @media #{$breakpoint-md} {
+        height: 350px;
+    }
+
+    @media #{$breakpoint-xs} {
+        height: 350px;
+    }
+
+    .post-overlay {
+        position: absolute;
+        width: 100%;
+        padding: 30px;
+        z-index: 100;
+        left: 0;
+        bottom: 0;
+
+        .post-meta a {
+            font-size: 14px;
+            color: $white;
+            display: inline-block;
+            margin-bottom: 10px;
+            margin-right: 10px;
+
+            &:hover,
+            &:focus {
+                color: $primary;
+            }
+        }
+
+        .post-title {
+            font-family: $font-oswald;
+            font-size: 30px;
+            color: $white;
+            margin-bottom: 0;
+
+            @media #{$breakpoint-md} {
+                font-size: 24px;
+            }
+
+            @media #{$breakpoint-xs} {
+                font-size: 20px;
+            }
+
+            &:hover,
+            &:focus {
+                color: $primary;
+            }
+        }
+    }
+
+    &:hover,
+    &:focus {
+        background-position: bottom center;
+    }
+
+    &.small-featured-post {
+        height: 170px;
+
+        .post-title {
+            font-size: 20px;
+
+            @media #{$breakpoint-lg} {
+                font-size: 14px;
+            }
+
+            @media #{$breakpoint-xs} {
+                font-size: 16px;
+            }
+
+            &:hover,
+            &:focus {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.razo-single-post {
+    position: relative;
+    z-index: 1;
+
+    .post-thumbnail {
+        position: relative;
+        z-index: 1;
+        @include flex(0 0 100px);
+        max-width: 100px;
+        width: 100px;
+
+        @media #{$breakpoint-md} {
+            @include flex(0 0 70px);
+            max-width: 70px;
+            width: 70px;
+        }
+
+        @media #{$breakpoint-xs} {
+            @include flex(0 0 80px);
+            max-width: 80px;
+            width: 80px;
+        }
+
+        a {
+            display: block;
+        }
+
+        img {
+            border-radius: 2px;
+        }
+    }
+
+    .post-content {
+        position: relative;
+        z-index: 1;
+        margin-left: 15px;
+
+        .post-meta a {
+            font-size: 14px;
+            color: $text;
+            display: inline-block;
+            margin-bottom: 5px;
+            margin-right: 10px;
+
+            &:hover,
+            &:focus {
+                color: $primary;
+            }
+        }
+
+        .post-title {
+            font-family: $font-oswald;
+            font-size: 20px;
+            color: $heading;
+            margin-bottom: 0;
+
+            @media #{$breakpoint-lg} {
+                font-size: 18px;
+            }
+
+            @media #{$breakpoint-md} {
+                font-size: 14px;
+            }
+
+            @media #{$breakpoint-xs} {
+                font-size: 16px;
+            }
+
+            &:hover,
+            &:focus {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.razo-single-latest-news-area {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 520px;
+
+    @media #{$breakpoint-lg} {
+        height: 470px;
+    }
+
+    @media #{$breakpoint-xs} {
+        height: 450px;
+    }
+
+    @media #{$breakpoint-sm} {
+        height: 400px;
+    }
+
+    .post-date {
+        position: absolute;
+        top: 0;
+        left: 50px;
+        z-index: 10;
+        width: 100px;
+        text-align: center;
+
+        @media #{$breakpoint-xs} {
+            left: 30px;
+            width: 90px;
+        }
+
+        h2 {
+            display: block;
+            background-color: $primary;
+            font-size: 48px;
+            padding: 20px 0;
+            color: $white;
+            margin-bottom: 0;
+            line-height: 1;
+
+            @media #{$breakpoint-xs} {
+                font-size: 30px;
+            }
+        }
+
+        p {
+            background-color: $white;
+            font-size: 14px;
+            color: $text;
+            padding: 5px 0;
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+    }
+
+    .post-content {
+        position: absolute;
+        width: 60%;
+        height: auto;
+        bottom: 50px;
+        left: 50px;
+        z-index: 10;
+
+        @media #{$breakpoint-xs} {
+            bottom: 30px;
+            left: 30px;
+        }
+
+        .post-title {
+            font-family: $font-oswald;
+            font-size: 30px;
+            color: $white;
+            display: block;
+            margin-bottom: 15px;
+
+            @media #{$breakpoint-lg} {
+                font-size: 24px;
+            }
+
+            @media #{$breakpoint-md} {
+                font-size: 24px;
+            }
+
+            @media #{$breakpoint-xs} {
+                font-size: 20px;
+            }
+
+            &:hover,
+            &:focus {
+                color: $hover;
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+            color: $white;
+
+            @media #{$breakpoint-lg} {
+                font-size: 14px;
+            }
+
+            @media #{$breakpoint-md} {
+                font-size: 14px;
+            }
+
+            @media #{$breakpoint-xs} {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .read-more-btn {
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+        z-index: 10;
+
+        @media #{$breakpoint-xs} {
+            right: 30px;
+            bottom: 30px;
+        }
+
+        .btn {
+            color: $white;
+            font-size: 14px;
+            padding: 0;
+            font-weight: 600;
+
+            @media #{$breakpoint-md} {
+                font-size: 12px;
+            }
+
+            @media #{$breakpoint-xs} {
+                font-size: 12px;
+            }
+
+            &:hover,
+            &:focus {
+                font-weight: 600;
+                color: $hover;
+            }
+        }
+    }
+}
+
+.featured-trending-video {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 600px;
+
+    @media #{$breakpoint-lg} {
+        height: 470px;
+    }
+
+    @media #{$breakpoint-md} {
+        height: 420px;
+    }
+
+    @media #{$breakpoint-xs} {
+        height: 260px;
+    }
+
+    iframe {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+}
+
+.razo-blog-masonary-single-item {
+    position: relative;
+    z-index: 1;
+    border-radius: 2px;
+    box-shadow: 0 1px 15px 1px rgba(0, 0, 0, 0.15);
+
+    .post-thumbnail {
+        img {
+            border-radius: 2px 2px 0 0;
+        }
+
+        a {
+            display: block;
+        }
+    }
+
+    .post-content {
+        padding: 30px;
+
+        .post-date {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 10px;
+            color: $secondary;
+        }
+
+        .post-title {
+            font-size: 20px;
+            display: block;
+            margin-bottom: 15px;
+            font-family: $font-oswald;
+
+            &:hover,
+            &:focus {
+                color: $hover;
+            }
+        }
+
+        .read-more-btn {
+            font-size: 14px;
+            color: $secondary;
+            padding: 0;
+
+            &:hover,
+            &:focus {
+                color: $hover;
+            }
+        }
+    }
+}
+
+.blog-details-post-thumbnail-area {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 600px;
+
+    @media #{$breakpoint-lg} {
+        height: 450px;
+    }
+
+    @media #{$breakpoint-md} {
+        height: 400px;
+    }
+
+    @media #{$breakpoint-xs} {
+        height: 400px;
+    }
+
+    .post-title-text {
+        text-align: center;
+
+        h2 {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 25px;
+            color: $white;
+
+            @media #{$breakpoint-md} {
+                font-size: 42px;
+            }
+
+            @media #{$breakpoint-xs} {
+                font-size: 30px;
+            }
+        }
+
+        .post-meta {
+            a {
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                font-size: 14px;
+                color: $white;
+
+                &:last-child {
+                    margin-left: 30px;
+
+                    &::after {
+                        position: absolute;
+                        content: '|';
+                        top: 0;
+                        left: -17px;
+                        z-index: 1;
+                    }
+                }
+
+                &:hover,
+                &:focus {
+                    color: $hover;
+                }
+            }
+        }
+    }
+}
+
+.razo-pagination {
+    position: relative;
+    z-index: 1;
+
+    .pagination .page-item .page-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 3px;
+        padding: 0;
+        line-height: 38px;
+        margin: 0 5px;
+        text-align: center;
+        background-color: transparent;
+        color: $text;
+        font-size: 16px;
+
+        &:focus,
+        &:hover {
+            background-color: $primary;
+            border-color: $primary;
+            color: $white;
+        }
+    }
+
+    .pagination .page-item.active .page-link {
+        background-color: $primary;
+        border-color: $primary;
+        color: $white;
+    }
+}
+
+.comment_area {
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    .title {
+        margin-bottom: 30px;
+        font-size: 30px;
+
+        @media #{$breakpoint-xs} {
+            font-size: 24px;
+        }
+    }
+
+    .comment-content {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 50px;
+
+        .comment-author {
+            @include flex(0 0 70px);
+            width: 70px;
+            max-width: 70px;
+            margin-right: 20px;
+            border-radius: 50%;
+
+            @media #{$breakpoint-xs} {
+                @include flex(0 0 50px);
+                width: 50px;
+                max-width: 50px;
+                margin-right: 10px;
+            }
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        .comment-meta {
+            .author-name {
+                margin-bottom: 10px;
+                font-size: 20px;
+                font-family: $font-oswald;
+                display: block;
+
+                @media #{$breakpoint-xs} {
+                    font-size: 14px;
+                }
+
+                .post-date {
+                    color: $text;
+                    font-size: 14px;
+                    font-family: $font-opensans;
+
+                    @media #{$breakpoint-xs} {
+                        font-size: 12px;
+                    }
+                }
+
+                &:hover,
+                &:focus {
+                    color: $hover;
+                }
+
+                @media #{$breakpoint-xs} {
+                    font-size: 16px;
+                }
+            }
+
+            p {
+                color: $text;
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 15px;
+                display: block;
+
+                @media #{$breakpoint-xs} {
+                    font-size: 14px;
+                }
+            }
+
+            a.like,
+            a.reply {
+                display: inline-block;
+                padding: 5px 15px 3px;
+                font-size: 12px;
+                font-weight: 600;
+                border: 1px solid $border;
+                text-transform: uppercase;
+
+                &:focus,
+                &:hover {
+                    border-color: $primary;
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .children {
+        margin-left: 50px;
+
+        @media #{$breakpoint-xs} {
+            margin-left: 20px;
+        }
+
+        .single_comment_area {
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.razo-blockquote {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+    .icon {
+        @include flex(0 0 70px);
+        max-width: 70px;
+        width: 70px;
+
+        @media #{$breakpoint-xs} {
+            @include flex(0 0 40px);
+            max-width: 40px;
+            width: 40px;
+        }
+
+        i {
+            font-size: 48px;
+            color: $primary;
+
+            @media #{$breakpoint-xs} {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .text {
+        p {
+            color: $heading;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-weight: 400;
+
+            @media #{$breakpoint-xs} {
+                font-size: 18px;
+            }
+        }
+
+        h6 {
+            margin-bottom: 0;
+            color: $hover;
+        }
+    }
+}
+
+.post-catagories {
+    position: relative;
+    z-index: 1;
+    margin: 20px 0 50px 0;
+
+    ul {
+        li {
+            margin: 5px;
+            font-weight: 600;
+
+            a {
+                display: inline-block;
+                background-color: $white;
+                color: $hover;
+                text-transform: capitalize;
+                font-size: 16px;
+                margin: 5px;
+                font-weight: 600;
+
+                &:focus,
+                &:hover {
+                    background-color: transparent;
+                    color: $heading;
+                }
+
+                @media #{$breakpoint-xs} {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.razo-post-share {
+    position: relative;
+    z-index: 1;
+
+    h5 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $primary;
+        color: $white;
+        text-align: center;
+        margin-bottom: 10px;
+        line-height: 40px;
+
+        &.facebook {
+            background-color: #4c65a8;
+        }
+
+        &.twitter {
+            background-color: #41a1f6;
+        }
+
+        &.google-plus {
+            background-color: #f43535;
+        }
+
+        &.pinterest {
+            background-color: #8f6247;
+        }
+
+        &.instagram {
+            background-color: #f0c605;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $primary;
+        }
+    }
+}
+
+.blog-details-area {
+    position: relative;
+    z-index: 1;
+
+    .post-details-text {
+        p {
+            @media #{$breakpoint-xs} {
+                font-size: 14px;
+            }
+        }
+    }
+}

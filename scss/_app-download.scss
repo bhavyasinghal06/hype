@@ -1,0 +1,50 @@
+/* :: 9.0 App Download CSS */
+
+.razo-app-download-area {
+    position: relative;
+    z-index: 1;
+
+    .app-download-text {
+        position: relative;
+        z-index: 1;
+
+        span {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: $white;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: $white;
+        }
+
+        p {
+            color: $white;
+            margin-bottom: 40px;
+
+            @media #{$breakpoint-md} {
+                font-size: 14px;
+            }
+
+            @media #{$breakpoint-xs} {
+                font-size: 14px;
+            }
+        }
+
+        .app-download-btn {
+            a {
+                display: inline-block;
+                margin-right: 10px;
+
+                img {
+                    @media #{$breakpoint-xs} {
+                        max-width: 120px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,244 @@
+/* :: 17.0 Podcast CSS */
+
+.podcast-hero-text {
+    position: relative;
+    z-index: 1;
+
+    @media #{$breakpoint-xs} {
+        @include flex-wrap(wrap);
+    }
+
+    h5 {
+        color: $white;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        color: $white;
+        font-size: 48px;
+        margin-bottom: 40px;
+
+        @media #{$breakpoint-lg} {
+            font-size: 42px;
+        }
+
+        @media #{$breakpoint-md} {
+            font-size: 36px;
+        }
+
+        @media #{$breakpoint-xs} {
+            font-size: 30px;
+        }
+    }
+
+    .podcast-meta-data {
+        a {
+            display: inline-block;
+            font-size: 14px;
+            color: $white;
+            margin-right: 30px;
+
+            @media #{$breakpoint-xs} {
+                font-size: 12px;
+                margin-right: 15px;
+            }
+
+            i {
+                margin-right: 10px;
+
+                @media #{$breakpoint-xs} {
+                    margin-right: 5px;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.podcast-audio-player-area {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 90px;
+    background-color: $heading;
+
+    .audioplayer {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 90px;
+        border: none;
+        border-radius: 0;
+        background: transparent;
+        padding: 0;
+
+        .audioplayer-time {
+            color: $white;
+            font-family: $font-oswald;
+        }
+
+        .audioplayer-bar-loaded {
+            background-color: $white;
+        }
+
+        .audioplayer-bar-played {
+            background-color: $hover;
+        }
+    }
+
+    .audioplayer-playing .audioplayer-bar-played::after,
+    .audioplayer:not(.audioplayer-playing) .audioplayer-bar-played::after {
+        border-color: $hover;
+    }
+
+    .audioplayer-bar-played::after {
+        background-color: $hover;
+    }
+}
+
+.single-podcast-area {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.15);
+
+    .podcast-thumb {
+        position: relative;
+        z-index: 1;
+
+        img {
+            width: 100%;
+        }
+
+        .like-comment {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 10;
+
+            a {
+                display: inline-block;
+                font-size: 14px;
+                color: $white;
+                margin-left: 15px;
+
+                &:hover,
+                &:focus {
+                    color: $hover;
+                }
+            }
+        }
+    }
+
+    .podcast-content {
+        padding: 30px;
+        position: relative;
+        z-index: 1;
+
+        .podcast-meta {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 15px;
+
+            a {
+                display: inline-block;
+                font-size: 13px;
+                color: $secondary;
+                margin-right: 15px;
+
+                &:hover,
+                &:focus {
+                    color: $hover;
+                }
+            }
+        }
+
+        h5 {
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .border-line {
+            width: 100%;
+            height: 1px;
+            background-color: $border;
+            display: block;
+            margin: 15px 0 20px 0;
+        }
+
+        .play-download-btn {
+            .music-download-btn {
+                font-size: 18px;
+                color: $secondary;
+
+                &:hover,
+                &:focus {
+                    color: $hover;
+                }
+            }
+        }
+    }
+}
+
+.razo-next-prev-pager {
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: 1px solid $border;
+
+    .prev-pager,
+    .next-pager {
+        @include flex(0 0 50%);
+        max-width: 50%;
+        width: 50%;
+
+        a {
+            span {
+                font-size: 14px;
+                display: block;
+                color: $secondary;
+                margin-bottom: 15px;
+            }
+
+            h6 {
+                margin-bottom: 0;
+                color: $text;
+                @include transition-duration(500ms);
+
+                @media #{$breakpoint-xs} {
+                    font-size: 14px;
+                }
+
+                &:hover,
+                &:focus {
+                    color: $hover;
+                }
+            }
+        }
+    }
+}
+
+.razo-author-avatar {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    @media #{$breakpoint-xs} {
+        margin-bottom: 50px;
+    }
+
+    img {
+        width: 70px;
+        border-radius: 70px;
+        margin-bottom: 15px;
+    }
+
+    h6 {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+}

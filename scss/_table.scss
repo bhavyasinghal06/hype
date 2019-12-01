@@ -1,0 +1,104 @@
+/* :: 10.0 Tables CSS */
+
+.weekly-schedule-table {
+    position: relative;
+    z-index: 1;
+
+    table {
+        thead {
+            th {
+                position: relative;
+                z-index: 1;
+                font-size: 20px;
+                padding: 0 0 10px 0;
+
+                p {
+                    font-size: 20px;
+                    font-family: $font-oswald;
+                    margin-bottom: 0;
+                    font-weight: 500;
+                    color: $heading;
+
+                    @media #{$breakpoint-md} {
+                        font-size: 16px;
+                    }
+
+                    @media #{$breakpoint-xs} {
+                        font-size: 14px;
+                    }
+
+                    @media #{$breakpoint-sm} {
+                        font-size: 16px;
+                    }
+                }
+
+                &::after {
+                    position: absolute;
+                    width: 80%;
+                    height: 2px;
+                    background-color: $primary;
+                    content: '';
+                    bottom: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+            }
+        }
+
+        tbody {
+
+            tr {
+                border-bottom: 1px solid $border;
+            }
+
+            th,
+            td {
+                padding: 20px 20px 20px 0;
+
+                span {
+                    font-weight: 600;
+
+                    @media #{$breakpoint-xs} {
+                        font-size: 12px;
+                    }
+                }
+
+                h5 {
+                    @media #{$breakpoint-md} {
+                        font-size: 16px;
+                    }
+
+                    @media #{$breakpoint-xs} {
+                        font-size: 14px;
+                    }
+
+                    @media #{$breakpoint-sm} {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            th {
+                p {
+                    font-size: 20px;
+                    font-family: $font-oswald;
+                    margin-bottom: 0;
+                    font-weight: 500;
+                    color: $heading;
+
+                    @media #{$breakpoint-md} {
+                        font-size: 16px;
+                    }
+
+                    @media #{$breakpoint-xs} {
+                        font-size: 14px;
+                    }
+
+                    @media #{$breakpoint-sm} {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
