@@ -40,16 +40,12 @@ if ( !$result ||mysqli_num_rows($result)!=0)
 
  
 else {
-	//echo '<script language="javascript">';
-	//echo 'alert("Invalid Username/ Password")';
-	//echo 'window.location = ".\loginreg\Login_v1\index.html"';
-	//echo '</script>';
+	echo '<script language="javascript">';
+	echo 'alert("Invalid Username/ Password")';
+	echo 'window.location = ".\loginreg\Login_v1\index.html"';
+	echo '</script>';
 
-	echo ("<script LANGUAGE='JavaScript'>
-    window.alert('Invalid Username Password');
-    window.location.href='./loginreg/Login_v1/index.html';
-    </script>");
-
+	
 	//header("Location: .\loginreg\Login_v1\index.html");
 	exit;	
    // echo "username doesnt exist";
