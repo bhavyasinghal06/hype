@@ -1,2 +1,2 @@
 # hype
-It is a website having music library.Link-https://bhavyasinghal06.github.io/hype/
+It is a music streaming service with latest tracks.Link-https://bhavyasinghal06.github.io/hype/
